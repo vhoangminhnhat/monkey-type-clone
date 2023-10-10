@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import "./style.scss"
+import { Button } from "antd";
 
 export default function Home() {
   return (
     <div style={{display: "grid", placeItems: "center"}}>
-      <h1>
+      <h1 className="break-words">
       <span>W</span>
       <span>e</span>
       <span>l</span>
@@ -28,6 +29,8 @@ export default function Home() {
       <span>p</span>
       <span>e</span>
     </h1>
+
+    <Button type="default" className="bg-orange-400 text-center text-black mt-3 font-bold hover:bg-amber-500">Start</Button>
     </div>
     
   );

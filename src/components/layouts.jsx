@@ -75,7 +75,7 @@ const Layouts = ({children}) => {
           marginTop: "auto"
         }}
       >
-        Ant Design ©2023 Created by Ant UED
+        John Types &copy;2023 Created by John Vu - Inspired by Monkey Type
       </Footer>
     </Layout>
   )
