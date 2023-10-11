@@ -1,15 +1,16 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import getQuotes from "../../api/list/getQuotes"
-import axios from 'axios';
+import api from '@/interceptors';
 
 const Quotes = () => {
   const [data, setData] = useState([]);
   const getData = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/api/quotes');
-      if(res){
-        setData(res?.data)
+      if(typeof window !== "undefined"){
+        const res = await api.get('api/quotes');
+          if(res){
+            setData(res);
+          }
       }
     } catch (error) {
       console.log(error)
@@ -20,9 +21,8 @@ const Quotes = () => {
   }, [])
 
   return (
-    
-    <div>
-
+    <div className='text-6xl break-words'>
+      {data?.[0]?.quotes}
     </div>
   )
 }

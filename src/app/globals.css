@@ -31,3 +31,13 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.parent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-menu-overflow-item .ant-menu-item .ant-menu-item-selected{
+  color: #cc6e10;
+}

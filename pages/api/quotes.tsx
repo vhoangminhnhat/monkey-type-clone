@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import {pool} from '../../lib/db';
+import { pool } from "../../lib/db";
 
 export default async function handlerQuotes(req: NextApiRequest, res: NextApiResponse){
     try {

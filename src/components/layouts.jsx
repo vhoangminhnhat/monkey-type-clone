@@ -31,18 +31,12 @@ const Layouts = ({children}) => {
 
   return (
     <Layout className="body">
-      <Header
-        // style={{
-        //   display: 'flex',
-        //   alignItems: 'center',
-        // }}
-      >
-        <div className="demo-logo" />
+      <Header style={{backgroundColor: "#0d0401"}}>
         <Menu
           onClick={({key}) => {
             router.push(key)
           }}
-          theme="dark"
+          style={{backgroundColor: "#0d0401", color: "white"}}
           mode="horizontal"
           items={items}
           defaultSelectedKeys={[pathname]}
@@ -51,20 +45,15 @@ const Layouts = ({children}) => {
       <Content
         style={{
           padding: '0 50px',
-          height: '100%'
+          height: '100%',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#0d0401"
         }}
       >
-        <Breadcrumb
-          style={{
-            margin: '16px 0',
-          }}
-        >
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
         <div
-          className="site-layout-content"
+          style={{fontFamily: "Hurme Geometric Sans 3 W01 Bold", color: "#eb8d2f"}}
         >
           {children}
         </div>
@@ -72,7 +61,8 @@ const Layouts = ({children}) => {
       <Footer
         style={{
           textAlign: 'center',
-          marginTop: "auto"
+          marginTop: "auto",
+          backgroundColor: "#0d0401"
         }}
       >
         John Types &copy;2023 Created by John Vu - Inspired by Monkey Type
